@@ -7,6 +7,8 @@ status=“500 Internal Server Error”
 | FIELDS time, status
 
 
-index="cloudeng_aks" cluster_name="aks-corp-util-dev-usc" container_name="enterprise-technology-services-api-dev" status="500 Internal Server Error" | STATS count(status) BY _time
+index="cloudeng_aks" cluster_name="aks-corp-util-dev-usc" container_name="enterprise-technology-services-api-dev" 
+status="500 Internal Server Error" | STATS count(status) BY _time
 
-index="cloudeng_aks" cluster_name="aks-corp-util-dev-usc" container_name="enterprise-technology-services-api-dev" eventtype=err0r status="500 Internal Server Error" | bucket span=10m _time | STATS count(status) BY _time
+index="cloudeng_aks" cluster_name="aks-corp-util-dev-usc" container_name="enterprise-technology-services-api-dev" 
+eventtype=err0r status="500 Internal Server Error" | bucket span=10m _time | STATS count(status) BY _time
