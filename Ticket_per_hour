@@ -1,0 +1,2 @@
+# query on numbers of ticket per hour
+index="cloudeng_aks" cluster_name="aks-corp-util-dev-usc" container_name="enterprise-technology-services-api-dev"| bucket span=60m _time | STATS count(ticket_number) by _time
