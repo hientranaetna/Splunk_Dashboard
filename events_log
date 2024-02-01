@@ -3,3 +3,15 @@ index="cloudeng_aks" cluster_name="aks-corp-util-prod-usc" container_name="enter
 # 
 index="cloudeng_aks" cluster_name="aks-corp-util-prod-usc" container_name="enterprise-technology-services-api-prod" 
 "500 Internal Server Error" | top limit=20 ticket_id
+
+#
+index="cloudeng_aks" cluster_name="aks-corp-util-prod-usc" container_name="enterprise-technology-services-api-prod" 
+eventtype=err0r status_500="500 Internal Server Error" | bucket span=10m _time | STATS count(status_500) BY _time
+
+#
+index="cloudeng_aks" cluster_name="aks-corp-util-prod-usc" container_name="enterprise-technology-services-api-prod" 
+Starting EnterpriseTechnologyServicesApiApplication | timechart span=1d count by container_name
+
+#
+index="cloudeng_aks" cluster_name="aks-corp-util-prod-usc" container_name="enterprise-technology-services-api-prod" 
+"500 Internal Server Error"
