@@ -1,0 +1,1 @@
+index="cloudeng_aks" cluster_name="aks-corp-util-dev-usc" container_name="enterprise-technology-services-api-uat" Starting EnterpriseTechnologyServicesApiApplication | timechart span=1d count by container_name
